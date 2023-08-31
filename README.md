@@ -113,7 +113,7 @@ GROUP BY weight_range;
 ````
 **Answer:**
 
-<img width="200" alt="image" src="https://github.com/abhirbhandary/Data-Driven-Business-Case-Study/blob/main/Images/Picture8.jpg">
+<img width="400" alt="image" src="https://github.com/abhirbhandary/Data-Driven-Business-Case-Study/blob/main/Images/Picture8.jpg">
 
 ***
 
