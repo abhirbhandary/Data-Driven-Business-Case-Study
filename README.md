@@ -24,11 +24,21 @@ The percentage of tech-product orders is relatively low.
 #### 2.1 How many products of these tech categories have been sold (within the time window of the database snapshot)? What percentage does that represent from the overall number of products sold?
 ````sql
 SELECT 
-  COUNT(DISTINCT id) AS unique_users
-FROM health.user_logs
+    CASE
+        WHEN pt.product_category_name_english IN ('audio', 'cds_dvds_musicals', 'consoles_games', 'dvds_blu_ray', 'electronics', 'computers_accessories', 'pc_gamer', 'computers', 'tablets_printing_image', 'telephony', 'fixed_telephony') 
+        THEN 'Tech'
+        ELSE 'others'
+    END AS category,
+    SUM(oi.order_item_id) AS total_order_items, SUM(order_item_id) * 100.0 / (SELECT SUM(order_item_id) FROM order_items) as Percentage
+FROM order_items as oi
+JOIN products as p ON oi.product_id = p.product_id
+JOIN product_category_name_translation as pt ON p.product_category_name = pt.product_category_name
+GROUP BY category
+#HAVING category = 'Tech'
+ORDER BY total_order_items DESC;
 ````
 **Answer:**
-
+<img width="141" alt="image" src="https://github.com/abhirbhandary/Data-Driven-Business-Case-Study/blob/main/Images/Picture4.jpg">
 
 
 
