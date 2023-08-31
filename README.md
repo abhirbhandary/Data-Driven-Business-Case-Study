@@ -38,7 +38,8 @@ GROUP BY category
 ORDER BY total_order_items DESC;
 ````
 **Answer:**
-<img width="141" alt="image" src="https://github.com/abhirbhandary/Data-Driven-Business-Case-Study/blob/main/Images/Picture4.jpg">
+
+<img width="200" alt="image" src="https://github.com/abhirbhandary/Data-Driven-Business-Case-Study/blob/main/Images/Picture4.jpg">
 
 
 
