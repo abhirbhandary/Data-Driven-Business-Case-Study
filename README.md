@@ -16,6 +16,27 @@ There are three main concerns:
 ![Customer Sentiment](https://github.com/abhirbhandary/Data-Driven-Business-Case-Study/blob/main/Images/Picture1.jpg)
 ![Top Key Phrase](https://github.com/abhirbhandary/Data-Driven-Business-Case-Study/blob/main/Images/Picture2.jpg)
 
+#### 1.1 How is the average review of Magist products?
+````sql
+SELECT 
+    CASE
+        WHEN pt.product_category_name_english IN ('audio', 'cds_dvds_musicals', 'consoles_games', 'dvds_blu_ray', 'electronics', 'computers_accessories', 'pc_gamer', 'computers', 'tablets_printing_image', 'telephony', 'fixed_telephony') 
+        THEN 'Tech'
+        ELSE 'others'
+    END AS category,
+    SUM(oi.order_item_id) AS total_order_items, Avg(review_score) as review_score
+FROM order_items as oi
+JOIN products as p ON oi.product_id = p.product_id join order_reviews as ro on ro.order_id = oi.order_id
+JOIN product_category_name_translation as pt ON p.product_category_name = pt.product_category_name
+GROUP BY category
+#HAVING category = 'Tech'
+ORDER BY total_order_items DESC;
+````
+**Answer:**
+
+<img width="400" alt="image" src="https://github.com/abhirbhandary/Data-Driven-Business-Case-Study/blob/main/Images/Picture9.jpg">
+
+
 ***
 ## 2. Is Magist a good partner for these high-end tech products
 The percentage of tech-product orders is relatively low.
@@ -39,7 +60,7 @@ ORDER BY total_order_items DESC;
 ````
 **Answer:**
 
-<img width="200" alt="image" src="https://github.com/abhirbhandary/Data-Driven-Business-Case-Study/blob/main/Images/Picture4.jpg">
+<img width="400" alt="image" src="https://github.com/abhirbhandary/Data-Driven-Business-Case-Study/blob/main/Images/Picture4.jpg">
 
 #### 2.2 Are expensive tech products popular?
 ````sql
@@ -60,7 +81,7 @@ ORDER BY avg_price;
 ````
 **Answer:**
 
-<img width="200" alt="image" src="https://github.com/abhirbhandary/Data-Driven-Business-Case-Study/blob/main/Images/Picture5.jpg">
+<img width="400" alt="image" src="https://github.com/abhirbhandary/Data-Driven-Business-Case-Study/blob/main/Images/Picture5.jpg">
 
 ***
 ## 3. Are deliveries fast enough?
