@@ -11,3 +11,6 @@ There are three main concerns:
 3. Are deliveries fast enough?
 
 ## Customer Satisfaction
+
+### 1. How many unique users exist in the logs dataset?
+Sentiment Analysis of Customer Reviews![image](https://github.com/abhirbhandary/Data-Driven-Business-Case-Study/assets/123348366/3d757414-7175-4531-8a20-a7b7d12c4b39
