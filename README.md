@@ -20,3 +20,20 @@ There are three main concerns:
 ## 2. Is Magist a good partner for these high-end tech products
 The percentage of tech-product orders is relatively low.
 ![Low](https://github.com/abhirbhandary/Data-Driven-Business-Case-Study/blob/main/Images/Picture3.jpg)
+
+#### 2.1 How many products of these tech categories have been sold (within the time window of the database snapshot)? What percentage does that represent from the overall number of products sold?
+````sql
+SELECT 
+  COUNT(DISTINCT id) AS unique_users
+FROM health.user_logs
+````
+**Answer:**
+
+
+
+
+
+
+
+
+
