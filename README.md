@@ -15,3 +15,7 @@ There are three main concerns:
 ### 1. Sentiment Analysis of Customer Reviews
 ![Customer Sentiment](https://github.com/abhirbhandary/Data-Driven-Business-Case-Study/blob/main/Images/Picture1.jpg)
 ![Top Key Phrase](https://github.com/abhirbhandary/Data-Driven-Business-Case-Study/blob/main/Images/Picture2.jpg)
+
+## Magist is a good partner for these high-end tech products
+The percentage of tech-product orders is relatively low.
+![Low](https://github.com/abhirbhandary/Data-Driven-Business-Case-Study/blob/main/Images/Picture3.jpg)
